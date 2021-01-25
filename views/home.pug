@@ -1,5 +1,15 @@
+
 extends layouts/navbar.pug
 block title
     title #{pageTitle}
+
 block content
-    h1 Home page
+    - var n = 0
+    while n < 10
+        .container.mt-5.d-flex.flex-row.justify-content-center
+            .card
+                .card-header= n++
+                .card-body
+                    h5.card-title Special title treatment
+                    p.card-text With supporting text below as a natural lead-in to additional content.
+                    a.btn.btn-primary(href='#') Go somewhere

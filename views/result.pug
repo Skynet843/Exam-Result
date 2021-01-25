@@ -1,0 +1,21 @@
+extends layouts/navbar.pug
+block title
+    title #{pageTitle}
+block content
+    .container.mt-5.d-flex.flex-row.justify-content-center
+        .col-6
+            if datas.length > 0
+                table.table.table-sm
+                    thead
+                        tr
+                            th(scope="col") #
+                            th(scope="col") Email
+                            th(scope="col") Marks
+                    tbody
+                        each val,i in datas
+                            tr
+                                th(scope="row") #{i+1} 
+                                td #{val.email }
+                                td #{val.marks}
+            else
+                h2 No data Found
