@@ -1,0 +1,16 @@
+const express = require('express');
+const path = require('path');
+const app = express();
+const bodyParser = require('body-parser');
+const adminRouter = require('./routes/admin');
+const homeRouter = require('./routes/home');
+const registrationRouter = require('./routes/registration');
+const { ADDRGETNETWORKPARAMS } = require('dns');
+app.set('view engine', 'pug');
+app.set('views', 'views');
+app.use(express.static( path.join(__dirname, 'public')));
+app.use(bodyParser.urlencoded({extended:false}));
+app.use(homeRouter);
+app.use(adminRouter);
+app.use(registrationRouter);
+app.listen(3000);

@@ -1,0 +1,14 @@
+extends layouts/navbar
+block title
+  title #{pageTitle}
+
+block content
+  .container.border.border-primary.mt-5
+    form.form-group.col-6.pt-1(action="/registration" method="POST")
+      .form-floating.mb-3
+        input#floatingInput.form-control(type="email" placeholder="Registraion Email")
+        label(for="floatingInput") Email address
+      .form-floating.mb-3
+        input#floatingPassword.form-control(type="number" placeholder="Marks")
+        label(for="floatingPassword") Marks
+      button.btn.btn-primary(type="submit") Save
