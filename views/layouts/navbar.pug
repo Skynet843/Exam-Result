@@ -10,11 +10,11 @@ html
         #navbarNav.collapse.navbar-collapse
           ul.navbar-nav
             li.nav-item
-              a.nav-link(aria-current="page" href="/") Home
+              a.nav-link(aria-current="page" href="/" class =(pageTitle ==='Exam result : Home' ? 'active' : '') ) Home
             li.nav-item
               a.nav-link(href="/registration" class =(pageTitle ==='Exam Result : Registration' ? 'active' : '') ) Registration
             li.nav-item
-              a.nav-link(href="/result") Result
+              a.nav-link(href="/result" class =(pageTitle ==='Exam Result : Result' ? 'active' : '') ) Result
             li.nav-item
-              a.nav-link(href="/about") About us
+              a.nav-link(href="/about" class =(pageTitle ==='Exam Result : About us' ? 'active' : '') ) About us
   block content
